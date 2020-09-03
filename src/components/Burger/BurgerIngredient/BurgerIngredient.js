@@ -1,47 +1,47 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import classes from './BurgerIngredient.module.css';
 
 class BurgerIngredient extends Component {
-    render () {
+    render() {
         let ingredient = null;
 
-        switch ( this.props.type ) {
-            case ( 'bread-bottom' ):
+        switch (this.props.type) {
+            case ('bread-bottom'):
                 ingredient = <div className={classes.BreadBottom}></div>;
-               // console.log("bread-bottom");
+                // console.log("bread-bottom");
                 break;
-            case ( 'bread-top' ):
+            case ('bread-top'):
                 ingredient = (
                     <div className={classes.BreadTop}>
                         <div className={classes.Seeds1}></div>
                         <div className={classes.Seeds2}></div>
                     </div>
                 );
-              //  console.log("bread-top");
+                //  console.log("bread-top");
                 break;
-            case ( 'meat' ):
+            case ('meat'):
                 ingredient = <div className={classes.Meat}></div>;
-               // console.log("meat");
+                // console.log("meat");
                 break;
-            case ( 'cheese' ):
+            case ('cheese'):
                 ingredient = <div className={classes.Cheese}></div>;
-              //  console.log("cheese");
+                //  console.log("cheese");
                 break;
-            case ( 'bacon' ):
+            case ('bacon'):
                 ingredient = <div className={classes.Bacon}></div>;
-               // console.log("bacon");
+                // console.log("bacon");
                 break;
-            case ( 'salad' ):
+            case ('salad'):
                 ingredient = <div className={classes.Salad}></div>;
-               // console.log("salad");
+                // console.log("salad");
                 break;
             default:
                 ingredient = null;
                 console.log("null");
         }
-        console.log(": ",ingredient);
+        console.log(": ", ingredient);
         return ingredient;
     }
 }

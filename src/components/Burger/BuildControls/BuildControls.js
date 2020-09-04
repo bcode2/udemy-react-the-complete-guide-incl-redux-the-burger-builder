@@ -17,19 +17,20 @@ const buildControls = (props) => (
                 <BuildControl
                     key={ctrl.label}
                     label={ctrl.label}
-                    added={()=>props.ingredientAddedHandler(ctrl.type)}
-                    removed={()=>props.removeIngredientHandler(ctrl.type)}
+                    added={() => props.ingredientAddedHandler(ctrl.type)}
+                    removed={() => props.removeIngredientHandler(ctrl.type)}
                     disabled={props.disabled[ctrl.type]}
                     price={props.price}
                 />
             ))}
 
-            <button
-                className={classes.OrderButton}
-                disabled={!props.purchasable}
-            >
-                ORDER NOW
-            </button>
+        <button
+            className={classes.OrderButton}
+            disabled={!props.purchasable}
+            {console.log(props.ordered)}
+            onClick={props.ordered}
+        >ORDER NOW
+        </button>
     </div>
 );
 

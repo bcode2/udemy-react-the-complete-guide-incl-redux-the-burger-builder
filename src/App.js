@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './bcode_logo.svg';
+import logo from './assests/images/bcode_logo.svg';
 import './App.css';
 import Layout from './components/Layout/Layout';
 import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder'
@@ -7,7 +7,7 @@ import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder'
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
+            {/*<header className="App-header">
                 <img src={logo} className="App-logo" alt="logo"/>
                 <a
                     className="App-link"
@@ -16,7 +16,7 @@ function App() {
                     rel="noopener noreferrer"
                 > Learn React
                 </a>
-            </header>
+            </header>*/}
             <Layout>
                 <BurgerBuilder/>
             </Layout>

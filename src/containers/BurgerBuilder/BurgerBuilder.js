@@ -98,6 +98,9 @@ class BurgerBuilder extends Component {
                         price={this.state.totalPrice.toFixed(2)}
                     />
                 </Modal>
+                {
+
+                }
                 <Burger ingredients={this.state.ingredients}/>
                 <BuildControls
                     ingredientAddedHandler={this.ingredientAddedHandler}

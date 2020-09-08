@@ -1,8 +1,11 @@
-.Logo{
-    background-color: transparent;
-    max-height: 80%;
-
+.Logo {
+    background-color: white;
+    padding: 8px;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
+
 .Logo img {
-    max-height: 40px;
+    height: 80%;
 }

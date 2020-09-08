@@ -3,7 +3,7 @@ import classes from './NavigationItems.module.css';
 import  NavigationItem from '../NavigationItems/NavigationItem/NavigationItem';
 
 
-const navigationItems =(props)=>(
+const navigationItems =()=>(
 <ul className={classes.NavigationItems}>
     <NavigationItem  link='/'> Burger Builder</NavigationItem>
     <NavigationItem link='/'>Checkout </NavigationItem>

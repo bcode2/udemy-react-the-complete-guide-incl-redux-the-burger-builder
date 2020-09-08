@@ -1,6 +1,10 @@
 import React from "react";
 import classes from './Burger.module.css';
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
+import { useDrag } from 'react-dnd'
+import ReactDOM from 'react-dom'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 
 
 const burger = (props) => {
@@ -11,13 +15,16 @@ const burger = (props) => {
                 });
             }).reduce((acc, currValue) => acc.concat(currValue), [])
 
-        if (transformedIngredients.length === 0) transformedIngredients = "Add ingredients";
+        if (transformedIngredients.length === 0) transformedIngredients = <p>Add ingredients</p>;
 
         return (
 
             <div className={classes.Burger}>
                 <BurgerIngredient type='bread-top'/>
+                {          console.log(transformedIngredients)}
+                <DndProvider backend={HTML5Backend}>
                 {transformedIngredients}
+                </DndProvider>
                 <BurgerIngredient type='bread-bottom'/>
             </div>
         );
